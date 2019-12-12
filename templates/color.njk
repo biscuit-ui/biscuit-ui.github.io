@@ -1,0 +1,47 @@
+<h1>Color</h1>
+
+<h2>Background color</h2>
+<div>
+    <div class="box inline-flex f-s-xs">
+        <div class="w-20 h-20 c-bg-black c-white flex flex-column align-center justify-center">.c-bg-black</div>
+        <div class="w-20 h-20 c-bg-white flex flex-column align-center justify-center">.c-bg-white</div>
+    </div>
+</div>
+
+
+<div class="m-t-2">
+    <div class="box inline-block">
+        {% for j in ['gray', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'indigo', 'purple', 'pink'] %}
+        <div class="flex">
+            {% for i in range(100, 1000, 100) %}
+            <div
+                class="w-20 h-20 c-bg-{{ j }}-{{ i }} f-s-xs flex flex-column align-center justify-center {{ 'c-black' if loop.index < 6 else 'c-white' }}">
+                .c-bg-{{ j }}-{{ i }}</div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+<h2>Text color</h2>
+<div>
+    <div class="box inline-flex f-s-xs">
+        <div class="w-20 h-20 c-bg-black c-white flex flex-column align-center justify-center">.c-white</div>
+        <div class="w-20 h-20 c-bg-white flex flex-column align-center justify-center">.c-black</div>
+    </div>
+</div>
+<div class="m-t-2">
+    <div class="box inline-block">
+        {% for j in ['gray', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'indigo', 'purple', 'pink'] %}
+        <div class="flex">
+            {% for i in range(100, 1000, 100) %}
+            <div
+                class="w-20 h-20 {{ 'c-bg-black' if loop.index < 6 else 'c-bg-white' }} c-{{ j }}-{{ i }} flex flex-column align-center justify-center f-s-xs">
+                .c-{{ j }}-{{ i }}</div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<h1>Font</h1>
+
+<div class="flex align-start">
+    <div class="box w-64">
+        <div class="box-title">Font size</div>
+        <div class="box-list">
+            <div>.f-s-xs</div>
+            <div>.f-s-sm</div>
+            <div>.f-s-md</div>
+            <div>.f-s-lg</div>
+            <div>.f-s-xl</div>
+            {% for i in range(2, 7) %}
+            <div>.f-s-{{ i }}xl</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="box w-64">
+        <div class="box-title">Font weight</div>
+        <div class="box-list">
+            {% for i in range(1, 10) %}
+                <div>.f-w-{{ i * 100 }}</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="box w-64">
+        <div class="box-title">Font style</div>
+        <div class="box-list">
+            <div>.italic</div>
+            <div>.not-italic</div>
+        </div>
+    </div>
+</div>

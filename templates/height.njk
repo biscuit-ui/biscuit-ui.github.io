@@ -1,0 +1,46 @@
+{% macro height() %}
+    <div class="box-list">
+        {% for i in range(0, 6) %}
+            <div>{{ '.h-' + i }}</div>
+        {% endfor %}
+        {% for i in range(3, 7) %}
+            <div>{{ '.h-' + i * 2 }}</div>
+        {% endfor %}
+        {% for i in range(4, 7) %}
+            <div>{{ '.h-' + i * 4 }}</div>
+        {% endfor %}
+        {% for i in range(4, 9) %}
+            <div>{{ '.h-' + i * 8 }}</div>
+        {% endfor %}
+        <div>.h-px</div>
+        <div>.h-auto</div>
+        <div>.h-full</div>
+        <div>.h-screen</div>
+    </div>
+{% endmacro %}
+
+<h1>Height</h1>
+
+<div class="flex flex-row align-start">
+    <div class="box w-64">
+        <div class="box-title">Height</div>
+        {{ height() }}
+    </div>
+
+    <div class="box w-64">
+        <div class="box-title">Min height</div>
+        <div class="box-list">
+            <div>.min-h-0</div>
+            <div>.min-h-full</div>
+            <div>.min-h-screen</div>
+        </div>
+    </div>
+
+    <div class="box w-64">
+        <div class="box-title">Max height</div>
+        <div class="box-list">
+            <div>.max-h-full</div>
+            <div>.max-h-screen</div>
+        </div>
+    </div>
+</div>

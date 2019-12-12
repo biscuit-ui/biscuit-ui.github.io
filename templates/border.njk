@@ -1,0 +1,42 @@
+
+
+<h1>Border</h1>
+
+<div class="flex align-start">
+    {% for i in range(0, 6) %}
+    <div class="w-24 h-24 b-{{ i }} m-2 flex justify-center align-center f-s-xs c-bg-gray-200">
+        .b-{{ i }}
+    </div>
+    {% endfor %}
+</div>
+
+{% for j in ['t', 'r', 'b', 'l'] %}
+<div class="flex align-start">
+    <div class="flex align-start">
+        {% for i in range(0, 6) %}
+        <div class="w-24 h-24 b-{{ j }}-{{ i }} m-2 flex justify-center align-center f-s-xs c-bg-gray-200">
+            .b-{{ j}}-{{ i }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+
+<h2>Border color</h2>
+<div class="f-w-bold m-b-2">Example</div>
+<div class="flex b-1 c-bg-white">
+    <pre class="w-1-2 b-r-1 p-4"><code class="code-multiline" lang="html"><span class="code-punctuation">&lt;</span><span class="code-tag">div </span><span class="code-attr-name">class</span><span class="code-punctuation">="</span><span class="code-attr-value">w-12 h-12 b-gray-300</span><span class="code-punctuation">"&gt;&lt;/</span><span class="code-tag">div</span><span class="code-punctuation">&gt;</span>
+
+<span class="code-punctuation">&lt;</span><span class="code-tag">div </span><span class="code-attr-name">class</span><span class="code-punctuation">="</span><span class="code-attr-value">w-12 h-12 b-gray-400</span><span class="code-punctuation">"&gt;&lt;/</span><span class="code-tag">div</span><span class="code-punctuation">&gt;</span>
+
+<span class="code-punctuation">&lt;</span><span class="code-tag">div </span><span class="code-attr-name">class</span><span class="code-punctuation">="</span><span class="code-attr-value">w-12 h-12 b-gray-500</span><span class="code-punctuation">"&gt;&lt;/</span><span class="code-tag">div</span><span class="code-punctuation">&gt;</span>
+
+<span class="code-punctuation">&lt;</span><span class="code-tag">div </span><span class="code-attr-name">class</span><span class="code-punctuation">="</span><span class="code-attr-value">w-12 h-12 m-2 b-2 r-full b-gray-600 c-bg-gray-200</span><span class="code-punctuation">"&gt;&lt;/</span><span class="code-tag">div</span><span class="code-punctuation">&gt;</span>
+</code></pre>
+    <div class="">
+        <div class="w-12 h-12 m-2 b-2 b-gray-300"></div>
+        <div class="w-12 h-12 m-2 b-2 b-gray-400"></div>
+        <div class="w-12 h-12 m-2 b-2 b-gray-500"></div>
+        <div class="w-12 h-12 m-2 b-2 r-full b-gray-600 c-bg-gray-200"></div>
+    </div>
+</div>

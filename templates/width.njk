@@ -1,0 +1,59 @@
+{% macro width() %}
+    <div class="box-list">
+        {% for i in range(0, 6) %}
+            <div>{{ '.w-' + i }}</div>
+        {% endfor %}
+        {% for i in range(3, 7) %}
+            <div>{{ '.w-' + i * 2 }}</div>
+        {% endfor %}
+        {% for i in range(4, 7) %}
+            <div>{{ '.w-' + i * 4 }}</div>
+        {% endfor %}
+        {% for i in range(4, 9) %}
+            <div>{{ '.w-' + i * 8 }}</div>
+        {% endfor %}
+        <div>.w-px</div>
+        <div>.w-auto</div>
+        <div>.w-full</div>
+        <div>.w-screen</div>
+    </div>
+{% endmacro %}
+
+<h1>Width</h1>
+
+<div class="flex align-start">
+    <div class="box w-64">
+        <div class="box-title">Width</div>
+        {{ width() }}
+    </div>
+
+    <div class="box w-64">
+        <div class="box-list">
+            {% for i in range(1, 7) %}
+                {% for j in range(1, i) %}
+                    <div>.w-{{ j }}-{{ i }}</div>
+                {% endfor %}
+            {% endfor %}
+            {% for i in range(1, 12) %}
+                <div>.w-{{ i }}-12</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="box w-64">
+        <div class="box-title">Min width</div>
+        <div class="box-list">
+            <div>.min-h-0</div>
+            <div>.min-h-full</div>
+            <div>.min-h-screen</div>
+        </div>
+    </div>
+
+    <div class="box w-64">
+        <div class="box-title">Max width</div>
+        <div class="box-list">
+            <div>.max-h-full</div>
+            <div>.max-h-screen</div>
+        </div>
+    </div>
+</div
